@@ -1,0 +1,14 @@
+<body>
+    <h1>Below is the query in url</h1>
+    <p id="query">Greetings</p>
+    <h1>Below is the specialId in query</h1>
+    <p id="specialId">Greetings</p>
+</body>
+  
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const specialId = urlParams.get("specialId")
+    document.getElementById("query").innerHTML = queryString;
+    document.getElementById("specialId").innerHTML = specialId;
+</script>    
