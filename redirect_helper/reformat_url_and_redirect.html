@@ -1,14 +1,11 @@
-<body>
-    <h1>Below is the query in url</h1>
-    <p id="query">Greetings</p>
-    <h1>Below is the specialId in query</h1>
-    <p id="specialId">Greetings</p>
-</body>
-  
+<!--
+    1. Take out realeye tester id.  
+    2. Reroute user to survey link with tester id.
+-->
 <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const specialId = urlParams.get("specialId")
-    document.getElementById("query").innerHTML = queryString;
-    document.getElementById("specialId").innerHTML = specialId;
-</script>    
+    const realeye_tester_id = urlParams.get("realeye-tester-id")
+    const url = "https://www.wjx.cn/vm/YIKbNgI.aspx?sojumpparam=" + realeye_tester_id
+    window.location.replace(url);
+</script> 
