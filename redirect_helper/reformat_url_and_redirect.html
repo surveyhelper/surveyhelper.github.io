@@ -2,10 +2,17 @@
     1. Take out realeye tester id.  
     2. Reroute user to survey link with tester id.
 -->
+
+<h1>It seems like we can't find your tester id to continue.</h1>
+
+<h1>Please report back to the survey owner.</h1>
+
 <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const realeye_tester_id = urlParams.get("realeye-tester-id")
-    const url = "https://www.wjx.cn/vm/YIKbNgI.aspx?sojumpparam=" + realeye_tester_id
-    window.location.replace(url);
+    if (urlParams.has("realeye-tester-id")) {
+        const realeye_tester_id = urlParams.get("realeye-tester-id")
+        const url = "https://www.wjx.cn/vm/rocI3Tg.aspx?sojumpparam=" + realeye_tester_id
+        window.location.replace(url);
+    }
 </script> 
